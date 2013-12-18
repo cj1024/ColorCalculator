@@ -19,6 +19,8 @@
 		3BB3061C18618F7B00284874 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB3060418618F7B00284874 /* UIKit.framework */; };
 		3BB3062418618F7B00284874 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BB3062218618F7B00284874 /* InfoPlist.strings */; };
 		3BB3062618618F7B00284874 /* ColorCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3062518618F7B00284874 /* ColorCalculatorTests.m */; };
+		3BB3063218618FAB00284874 /* CTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3063018618FAB00284874 /* CTMainViewController.m */; };
+		3BB3063318618FAB00284874 /* CTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BB3063118618FAB00284874 /* CTMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		3BB3062118618F7B00284874 /* ColorCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		3BB3062318618F7B00284874 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3BB3062518618F7B00284874 /* ColorCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorCalculatorTests.m; sourceTree = "<group>"; };
+		3BB3062F18618FAB00284874 /* CTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainViewController.h; sourceTree = "<group>"; };
+		3BB3063018618FAB00284874 /* CTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainViewController.m; sourceTree = "<group>"; };
+		3BB3063118618FAB00284874 /* CTMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 				3BB3061018618F7B00284874 /* CTAppDelegate.m */,
 				3BB3061218618F7B00284874 /* Images.xcassets */,
 				3BB3060718618F7B00284874 /* Supporting Files */,
+				3BB3062F18618FAB00284874 /* CTMainViewController.h */,
+				3BB3063018618FAB00284874 /* CTMainViewController.m */,
+				3BB3063118618FAB00284874 /* CTMainViewController.xib */,
 			);
 			path = ColorCalculator;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 			files = (
 				3BB3060B18618F7B00284874 /* InfoPlist.strings in Resources */,
 				3BB3061318618F7B00284874 /* Images.xcassets in Resources */,
+				3BB3063318618FAB00284874 /* CTMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +251,7 @@
 			files = (
 				3BB3060D18618F7B00284874 /* main.m in Sources */,
 				3BB3061118618F7B00284874 /* CTAppDelegate.m in Sources */,
+				3BB3063218618FAB00284874 /* CTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +375,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorCalculator/ColorCalculator-Prefix.pch";
 				INFOPLIST_FILE = "ColorCalculator/ColorCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -378,6 +389,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorCalculator/ColorCalculator-Prefix.pch";
 				INFOPLIST_FILE = "ColorCalculator/ColorCalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
