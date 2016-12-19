@@ -78,10 +78,10 @@
         return;
     }
     CTColor *color = [[CTColor alloc] initWithHexString:[self.mTextFieldHexString.text stringByReplacingOccurrencesOfString:@" " withString:@""]];
-    self.mTextFieldIntStringA.text = [NSString stringWithFormat:@"%d",color.alpha];
-    self.mTextFieldIntStringR.text = [NSString stringWithFormat:@"%d",color.red];
-    self.mTextFieldIntStringG.text = [NSString stringWithFormat:@"%d",color.green];
-    self.mTextFieldIntStringB.text = [NSString stringWithFormat:@"%d",color.blue];
+    self.mTextFieldIntStringA.text = [NSString stringWithFormat:@"%ld", (long)color.alpha];
+    self.mTextFieldIntStringR.text = [NSString stringWithFormat:@"%ld", (long)color.red];
+    self.mTextFieldIntStringG.text = [NSString stringWithFormat:@"%ld", (long)color.green];
+    self.mTextFieldIntStringB.text = [NSString stringWithFormat:@"%ld", (long)color.blue];
     self.mViewColorPreview.backgroundColor = [UIColor colorWithRed:color.red/255.0 green:color.green/255.0 blue:color.blue/255.0 alpha:color.alpha/255.0];
 }
 
@@ -93,10 +93,10 @@
     NSInteger g = self.mTextFieldIntStringG.text.length == 0? 0 : [self.mTextFieldIntStringG.text integerValue];
     NSInteger b = self.mTextFieldIntStringB.text.length == 0? 0 : [self.mTextFieldIntStringB.text integerValue];
     CTColor *color = [[CTColor alloc] initWithR:r G:g B:b A:a];
-    self.mTextFieldIntStringA.text = [NSString stringWithFormat:@"%d",color.alpha];
-    self.mTextFieldIntStringR.text = [NSString stringWithFormat:@"%d",color.red];
-    self.mTextFieldIntStringG.text = [NSString stringWithFormat:@"%d",color.green];
-    self.mTextFieldIntStringB.text = [NSString stringWithFormat:@"%d",color.blue];
+    self.mTextFieldIntStringA.text = [NSString stringWithFormat:@"%ld", (long)color.alpha];
+    self.mTextFieldIntStringR.text = [NSString stringWithFormat:@"%ld", (long)color.red];
+    self.mTextFieldIntStringG.text = [NSString stringWithFormat:@"%ld", (long)color.green];
+    self.mTextFieldIntStringB.text = [NSString stringWithFormat:@"%ld", (long)color.blue];
     self.mTextFieldHexString.text = color.hexString;
     self.mViewColorPreview.backgroundColor = [UIColor colorWithRed:color.red/255.0 green:color.green/255.0 blue:color.blue/255.0 alpha:color.alpha/255.0];
 }
@@ -108,7 +108,10 @@
 
 
 #pragma mark - --------------------接口API--------------------
-
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end
 
@@ -224,7 +227,7 @@
 #pragma mark - --------------------功能函数--------------------
 - (void)getHexStringFromRGBA
 {
-    _hexString = [NSString stringWithFormat:@"0x%02x%02x%02x%02x", _alpha, _red, _green, _blue];
+    _hexString = [NSString stringWithFormat:@"0x%02lx%02lx%02lx%02lx", (long)_alpha, (long)_red, (long)_green, (long)_blue];
 }
 
 
